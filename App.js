@@ -2,16 +2,16 @@ import React from "react"
 import {Text,View,ScrollView,Image,TouchableOpacity,StyleSheet} from "react-native"
 import Sound from "react-native-sound"
 const soundList = [
-  require("./assets/one.wav"),
-  require("./assets/two.wav"),
-  require("./assets/three.wav"),
-  require("./assets/four.wav"),
-  require("./assets/five.wav"),
-  require("./assets/six.wav"),
-  require("./assets/seven.wav"),
-  require("./assets/eight.wav"),
-  require("./assets/nine.wav"),
-  require("./assets/ten.wav")
+  require("./assets/English-voice/one.mp3"),
+  require("./assets/English-voice/two.mp3"),
+  require("./assets/English-voice/three.mp3"),
+  require("./assets/English-voice/four.mp3"),
+  require("./assets/English-voice/five.mp3"),
+  require("./assets/English-voice/six.mp3"),
+  require("./assets/English-voice/seven.mp3"),
+  require("./assets/English-voice/eight.mp3"),
+  require("./assets/English-voice/nine.mp3"),
+  require("./assets/English-voice/ten.mp3")
 ]
 
 const App = () => {
@@ -24,13 +24,13 @@ const App = () => {
     })
     setTimeout(() => {
       soundVoice.play()
-    },500)
+    },100)
     soundVoice.release()
   }
 
   return(
     <ScrollView style={styles.container}>
-      <Image source={require("./assets/logo.png")} style={styles.img}/>
+      <Image source={require("./assets/img/logo.png")} style={styles.img}/>
       <View style={styles.gridContainer}>
           {soundList.map((sound) => (
         <TouchableOpacity key={sound} style={styles.box} 
